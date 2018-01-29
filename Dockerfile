@@ -1,7 +1,7 @@
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 
 ENV CONFIGURE_OPTS --disable-install-doc
-ENV PATH /root/.rbenv/versions/2.2.0/bin:/root/.rbenv/bin:$PATH
+ENV PATH /root/.rbenv/versions/2.2.2/bin:/root/.rbenv/bin:$PATH
 ENV RUBYOPT W0
 
 # Install packages for building ruby

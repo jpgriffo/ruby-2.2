@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 
 ENV CONFIGURE_OPTS --disable-install-doc
-ENV PATH /root/.rbenv/versions/2.2.2/bin:/root/.rbenv/bin:$PATH
+ENV PATH /root/.rbenv/versions/2.2.8/bin:/root/.rbenv/bin:$PATH
 ENV RUBYOPT W0
 
 # Install packages for building ruby
@@ -11,5 +11,5 @@ RUN apt-get update && \
 	git clone https://github.com/sstephenson/rbenv.git /root/.rbenv && \
 	git clone https://github.com/sstephenson/ruby-build.git /root/.rbenv/plugins/ruby-build && \
 	./root/.rbenv/plugins/ruby-build/install.sh && \
-	rbenv install 2.2.2 && echo 'gem: --no-rdoc --no-ri' >> /.gemrc && \
-	rbenv global 2.2.2 && gem install bundler && rbenv rehash
+	rbenv install 2.2.8 && echo 'gem: --no-rdoc --no-ri' >> /.gemrc && \
+	rbenv global 2.2.8 && gem install bundler && rbenv rehash
